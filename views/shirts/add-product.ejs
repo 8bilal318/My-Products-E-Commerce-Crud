@@ -1,0 +1,26 @@
+<%- include('../partials/header', { title: 'Add Shirt', navButton: { text: '⬅ Back to List', link: '/shirts', class: 'btn-secondary' } }) %>
+
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div class="card shadow-sm">
+      <div class="card-header bg-primary text-white">
+        <h4 class="mb-0">Add New Shirt</h4>
+      </div>
+      <div class="card-body">
+        <form action="/shirts/add" method="POST">
+          <div class="mb-3">
+            <label for="name" class="form-label">Shirt Name</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Enter shirt name" required>
+          </div>
+          <div class="mb-3">
+            <label for="price" class="form-label">Price (Rs)</label>
+            <input type="number" id="price" name="price" class="form-control" placeholder="Enter price" required>
+          </div>
+          <button type="submit" class="btn btn-success w-100">Add Shirt</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('../partials/footer') %>

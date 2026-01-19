@@ -1,0 +1,71 @@
+<%- include('partials/header', { title: 'Home', navButton: null }) %>
+
+<div class="text-center mb-5">
+  <h1 class="fw-bold display-5">Welcome to My Store</h1>
+  <p class="text-muted fs-5">Select a category to manage products</p>
+</div>
+
+<div class="row justify-content-center g-4">
+
+  <!-- PANTS CARD -->
+  <div class="col-md-4">
+    <div class="card shadow-lg border-primary h-100 text-center hover-shadow" style="transition: transform 0.3s;">
+      <div class="card-body d-flex flex-column justify-content-between">
+        <div>
+          <div class="mb-3">
+            <i class="bi bi-trousers fs-1 text-primary"></i> <!-- Bootsrap Icons -->
+          </div>
+          <h4 class="card-title fw-bold">Pants</h4>
+          <p class="card-text text-muted">Manage pants products</p>
+        </div>
+        <a href="/pants" class="btn btn-primary w-100 mt-3">Go to Pants</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHIRTS CARD -->
+  <div class="col-md-4">
+    <div class="card shadow-lg border-success h-100 text-center hover-shadow" style="transition: transform 0.3s;">
+      <div class="card-body d-flex flex-column justify-content-between">
+        <div>
+          <div class="mb-3">
+            <i class="bi bi-shirt fs-1 text-success"></i>
+          </div>
+          <h4 class="card-title fw-bold">Shirts</h4>
+          <p class="card-text text-muted">Manage shirts products</p>
+        </div>
+        <a href="/shirts" class="btn btn-success w-100 mt-3">Go to Shirts</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- COATS CARD -->
+  <div class="col-md-4">
+    <div class="card shadow-lg border-warning h-100 text-center hover-shadow" style="transition: transform 0.3s;">
+      <div class="card-body d-flex flex-column justify-content-between">
+        <div>
+          <div class="mb-3">
+            <i class="bi bi-jacket fs-1 text-warning"></i>
+          </div>
+          <h4 class="card-title fw-bold">Coats</h4>
+          <p class="card-text text-muted">Manage coats products</p>
+        </div>
+        <a href="/coats" class="btn btn-warning w-100 mt-3">Go to Coats</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<style>
+  /* Card hover effect */
+  .hover-shadow:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3);
+  }
+</style>
+
+<%- include('partials/footer') %>
+
+<!-- Add Bootstrap Icons CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">

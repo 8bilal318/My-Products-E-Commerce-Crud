@@ -1,0 +1,35 @@
+<%- include('../partials/header', { title: 'Coats List', navButton: { text: '+ Add Coat', link: '/coats/add', class: 'btn-success' } }) %>
+
+<h2 class="fw-bold mb-3">Coats List</h2>
+
+<% if (products.length === 0) { %>
+  <div class="alert alert-warning text-center">No Coats Found</div>
+<% } else { %>
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover align-middle">
+      <thead class="table-dark">
+        <tr>
+          <th>#</th>
+          <th>Coat Name</th>
+          <th>Price (Rs)</th>
+          <th width="180">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% products.forEach((p, index) => { %>
+          <tr>
+            <td><%= index + 1 %></td>
+            <td><%= p.name %></td>
+            <td><%= p.price %></td>
+            <td>
+              <a href="/coats/edit/<%= p._id %>" class="btn btn-sm btn-primary">Edit</a>
+              <a href="/coats/delete/<%= p._id %>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</a>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+<% } %>
+
+<%- include('../partials/footer') %>
